@@ -1,9 +1,7 @@
 <template>
   <div class="home">
-    <Header></Header>
-    <div class="container">
       <div class="menu">
-        <router-link tag="div" to="/city" class="city">
+        <router-link tag="div" to="/home/city" class="city">
           <span>武汉</span>
           <i class="iconfont icon-lower-triangle"></i>
         </router-link>
@@ -15,28 +13,23 @@
           <i class="iconfont icon-sousuo"></i>
         </div>
       </div>
-    </div>
-    <router-view></router-view>
+      <router-view></router-view>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import Header from "../components/Header";
-
 export default {
   name: "home",
-  components: {
-    Header
-  }
+  components: {}
 };
 </script>
-<style lang="less" scoped>
+<style lang="less">
 .home {
   width: 100%;
-  .container {
-    width: 100%;
-    margin-top: 51px;
+  height:100%;
+  margin-top: 51px;
+  margin-bottom: 52px;
     .menu {
       height: 45px;
       width: 100%;
@@ -58,16 +51,22 @@ export default {
           color: #666;
           margin: 0 12px;
           font-weight: 700;
-          &.active{ color: #ef4238; border-bottom: 2px #ef4238 solid;}
+          &.active {
+            color: #ef4238;
+            border-bottom: 2px #ef4238 solid;
+          }
         }
       }
       .search {
         margin-right: 20px;
         height: 100%;
+        width: 22px;
         line-height: 45px;
-        i{  font-size:24px; color:red;}
+        i {
+          font-size: 24px;
+          color: red;
+        }
       }
     }
-  }
 }
 </style>

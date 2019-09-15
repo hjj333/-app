@@ -18,9 +18,9 @@ export default {
         position: fixed;
         top: 0;
         text-align: center;
-        line-height: 50px;
         p {
             font-size: 18px;
+            line-height: 25px;
         }
     }
 </style>
